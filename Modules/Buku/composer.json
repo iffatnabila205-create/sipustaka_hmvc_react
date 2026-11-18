@@ -1,0 +1,22 @@
+{
+    "name": "nwidart/buku",
+    "description": "Modul Buku SiPustaka",
+    "authors": [
+        {
+            "name": "SiPustaka",
+            "email": "admin@sipustaka.test"
+        }
+    ],
+    "extra": {
+        "laravel": {
+            "providers": [],
+            "aliases": {}
+        }
+    },
+    "autoload": {
+        "psr-4": {
+            "Modules\\Buku\\": "app/",
+            "Modules\\Buku\\Database\\Seeders\\": "database/seeders/"
+        }
+    }
+}

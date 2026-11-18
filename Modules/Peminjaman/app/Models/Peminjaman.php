@@ -1,0 +1,35 @@
+<?php
+
+namespace Modules\Peminjaman\Models;
+
+use Illuminate\Database\Eloquent\Model;
+
+class Peminjaman extends Model
+{
+    public const STATUS_DIPINJAM = 'Dipinjam';
+    public const STATUS_DIKEMBALIKAN = 'Dikembalikan';
+
+    protected $table = 'peminjaman';
+
+    protected $fillable = [
+        'nama_peminjam',
+        'judul_buku',
+        'tanggal_pinjam',
+        'tanggal_kembali',
+        'status',
+        'bukti',
+    ];
+
+    protected $casts = [
+        'tanggal_pinjam' => 'date:Y-m-d',
+        'tanggal_kembali' => 'date:Y-m-d',
+    ];
+
+    // Ikut dikirim di JSON agar frontend bisa membuat tautan ke berkas.
+    protected $appends = ['bukti_url'];
+
+    public function getBuktiUrlAttribute(): ?string
+    {
+        return $this->bukti ? asset('storage/'.$this->bukti) : null;
+    }
+}

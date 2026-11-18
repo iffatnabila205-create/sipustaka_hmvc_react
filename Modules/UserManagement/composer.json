@@ -1,0 +1,22 @@
+{
+    "name": "nwidart/usermanagement",
+    "description": "Modul UserManagement SiPustaka",
+    "authors": [
+        {
+            "name": "SiPustaka",
+            "email": "admin@sipustaka.test"
+        }
+    ],
+    "extra": {
+        "laravel": {
+            "providers": [],
+            "aliases": {}
+        }
+    },
+    "autoload": {
+        "psr-4": {
+            "Modules\\UserManagement\\": "app/",
+            "Modules\\UserManagement\\Database\\Seeders\\": "database/seeders/"
+        }
+    }
+}

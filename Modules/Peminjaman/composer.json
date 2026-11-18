@@ -1,0 +1,22 @@
+{
+    "name": "nwidart/peminjaman",
+    "description": "Modul Peminjaman SiPustaka",
+    "authors": [
+        {
+            "name": "SiPustaka",
+            "email": "admin@sipustaka.test"
+        }
+    ],
+    "extra": {
+        "laravel": {
+            "providers": [],
+            "aliases": {}
+        }
+    },
+    "autoload": {
+        "psr-4": {
+            "Modules\\Peminjaman\\": "app/",
+            "Modules\\Peminjaman\\Database\\Seeders\\": "database/seeders/"
+        }
+    }
+}

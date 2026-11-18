@@ -1,0 +1,11 @@
+{
+    "name": "Peminjaman",
+    "alias": "peminjaman",
+    "description": "Modul peminjaman buku (CRUD AJAX + upload bukti)",
+    "keywords": [],
+    "priority": 0,
+    "providers": [
+        "Modules\\Peminjaman\\Providers\\PeminjamanServiceProvider"
+    ],
+    "files": []
+}
